@@ -6,7 +6,7 @@ export default class UploadPrescription extends Component {
             function(error, result) {
               if(!error && result && result.event === "success") { 
                  let text = "Please Check the uploaded prescription at "+ encodeURIComponent(result.info.secure_url);
-                 let link = "http://wa.me/918248161684?text=" + text;
+                 let link = "http://wa.me/918248179620?text=" + text;
                  window.location.href=link;
               }
             });
