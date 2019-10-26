@@ -8,10 +8,10 @@ class ProductProvider extends Component {
         detailProdcut:Products
     }
     handleDetail = () => {
-        console.log("hello from detail");
+        //console.log("hello from detail");
     }
     addToCart = () => {
-        console.log("hello from add to cart");
+        //console.log("hello from add to cart");
     }
     render() {
         return (

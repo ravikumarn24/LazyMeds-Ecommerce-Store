@@ -71,7 +71,7 @@ export class Product extends Component {
 
 
 const ProductWrapper = styled.div`
-font-size:0.8em;
+font-size:0.8rem;
 .card{
     border-color: transparent;
     transition: all 1s linear;
