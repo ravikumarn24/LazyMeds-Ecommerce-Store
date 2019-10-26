@@ -4,6 +4,7 @@ import logo from "../logo.svg"
 import {ButtonContainer} from './button'
 import {Navigator} from "./Styledcomponents"
 import {cloudinary} from 'cloudinary-react'
+import UploadPrescription from './UploadPrescription'
 
 export default class MenuBar extends Component {
    constuctor() {
@@ -14,16 +15,6 @@ export default class MenuBar extends Component {
       let path = `newPath`;
       this.props.history.push(path);
     }
-   uploadWidget() {
-      window.cloudinary.openUploadWidget({ cloud_name: 'dlld49z2k', upload_preset: 'humw6nxm'},
-          function(error, result) {
-            if(!error && result && result.event === "success") { 
-               let text = "Please Check the uploaded prescription at "+ encodeURIComponent(result.info.secure_url);
-               let link = "http://wa.me/918248161684?text=" + text;
-               window.location.href=link;
-            }
-          });
-  }
    render() {
       return (
          <Navigator className="navbar navbar-expand-sm fixed-top navbar-dark px-sm-5 h-1 ">
@@ -47,7 +38,7 @@ export default class MenuBar extends Component {
                   </ButtonContainer>
             </Link>
             <span className="d-none d-lg-block">
-            <button  onClick={this.uploadWidget.bind(this)} className=" cloudinary-button btn btn-primary btn-sm">Upload files</button>
+               <UploadPrescription/>
             </span>
          </Navigator>
       )

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom'
 import MenuBar from './components/MenuBar'
 import Cart from './components/Cart'
-import Description from'./components/Description'
 import ProductGrid from'./components/ProductGrid'
 import Contact from './components/Contact'
 import Error from './components/Error'
@@ -21,7 +20,6 @@ class App extends React.Component {
            <MenuBar/>
            <Switch>
               <Route exact path="/" component={ProductGrid}/>
-              <Route exact path="/description" component={Description}/>
               <Route exact path="/cart" component={Cart}/>
               <Route exact path="/contact" component={Contact}/>
               <Route component={Error} />
