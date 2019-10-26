@@ -17,19 +17,21 @@ export class Product extends Component {
                                 <img src={img} alt={id} className="card-img-top"/>
                             </span>
                             <div className="card-footer justify-content-between ">
-                                <p className="align-self-center nb-0">
+                                <span className="card-info">
+                                <p className="align-self-center nb-0 card-title">
                                     {name}
                                 </p>
-                                <p className="align-self-center nb-0 d-flex ">
-                                    <b className="mr-1">Rs. {mrp-discount*mrp}</b>
+                                <p className="align-self-center nb-0 d-flex card-price">
+                                    <b className="mr-1">Rs. {mrp-parseInt(discount*mrp)}</b>
                                     <i className="mr-1 text-danger"><del>Rs. {mrp} </del></i>
                                     <i className="mr-1 d-none d-lg-block text-success"> {discount*100}% OFF</i>
                                 </p>
                                 <p className="align-self-center align-items-center nb-0 d-flex">
                                     <i className="d-lg-none text-success"> {discount*100}% OFF</i>
                                 </p>
-                                <p className="align-self-center nb-0 d-flex">
-                                    <button type="button" className="btn btn-info align-self-center" data-toggle="modal" data-target="#exampleModal" onClick={
+                                </span>
+                                <center><p className="align-items-center nb-0 d-flex">
+                                <button type="button" className="btn btn-info align-self-center" data-toggle="modal" data-target="#exampleModal" onClick={
                                         () => {}
 
                                     }
@@ -58,7 +60,7 @@ export class Product extends Component {
                                             </div>
                                         </div>
                                         </div>
-                                </p>
+                                </p></center>
                             </div>
                         </Link>
                     </div>
@@ -71,15 +73,36 @@ export class Product extends Component {
 
 
 const ProductWrapper = styled.div`
-font-size:0.8rem;
+.card-info{
+    font-size:0.8rem;
+}
 .card{
     border-color: transparent;
     transition: all 1s linear;
 }
-.card-footer{
-    border-top: transparent;
-    height: calc(150px);
+.btn{
+    font-size:0.7rem;
 }
+.card-price{
+    font-size:0.8rem;
+}
+.card-footer{
+    font-size:0.7rem;
+    border-top: transparent;
+    height: calc(200px);
+}
+.card-title{
+    line-height: 1.5em;
+    height: 3em;      
+    overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+    .card-title{
+        line-height: 1.5em;
+        height: 4.5em;      
+        overflow: hidden;
+    }
+  }
 .img-container{
     position: relative;
     overflow: hidden;
