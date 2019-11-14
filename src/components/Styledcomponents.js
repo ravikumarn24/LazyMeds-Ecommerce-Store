@@ -4,6 +4,9 @@ export const Navigator = styled.nav`
 background: var(--mainPink);
 width: 100%;
 max-height: 30%;
+box-sizing: border-box;
+padding-top: 2%;
+padding-bottom: 2%;
 @media(min-width: 768px){
   height: 8%;
 }

@@ -31,6 +31,9 @@ body{
 .btn-cart{
   background: var(--mainPink) !important;
 }
+.container{
+  box-sizing: border-box !important;
+}
 .upload-widget{
   color: var(--mainBlue) !important;
   line-height: 2 !important;
@@ -53,7 +56,9 @@ body{
   margin-top:16%;
 }
 }
-
+.nav-bar{
+  width: 100%;
+}
 @media (min-width:768px){
   .carousel-position{
     margin-top: 5%;
