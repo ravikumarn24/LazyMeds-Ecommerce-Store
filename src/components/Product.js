@@ -25,7 +25,7 @@ function CartButton() {
     render() {
         const {id,name,img,mrp,discount} = this.props.product;
         return (
-            <ProductWrapper className="col-6 col-md-6 col-lg-3 mx-auto px-1">
+            <ProductWrapper className="col-6 col-sm-6 col-xs-6 col-md-6 col-lg-3 px-1">
                 <div className="CellView">
                     <div className="card py-5 px-2" >
                         <Link to="/" className="no-underline">

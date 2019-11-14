@@ -50,6 +50,7 @@ body{
   align-content: center !important;
 }
 .cart-position{
+  font-size: 0.8rem !important;
   margin-top:16%;
 }
 }
@@ -63,6 +64,7 @@ body{
     margin-top: 5%;
   }
   .cart-position{
+    font-size: 0.8rem !important;
     margin-top: 6%;
   }
 }
