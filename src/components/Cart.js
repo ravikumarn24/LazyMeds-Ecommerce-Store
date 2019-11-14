@@ -21,7 +21,7 @@ export class Cart extends Component {
             total += cartItem.cartQuantity * discountedPrice;
         }
         return (
-            <div className="text-center ">
+            <div className="text-center cart-position">
                 <strong>Total :  {total}</strong>
             </div>
         )
