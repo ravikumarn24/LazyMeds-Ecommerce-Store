@@ -7,8 +7,8 @@ export const Products = [
         discount: 0.05,
         img: 'Nestle Nan Pro Stage 1 Powder Tin 400gm.png',
         brand: 'Nestle',
-        description: "Buy Nestle Nan Pro Stage 1 Power Tin 400gm"
-
+        description: "Buy Nestle Nan Pro Stage 1 Power Tin 400gm",
+        cartQuantity: 0
     },
     {
         id:2,
@@ -18,7 +18,8 @@ export const Products = [
         discount: 0.05,
         img: 'Nestle Nan Pro Stage 2 follow up Refill 400gm.jpg',
         brand: 'Nestle',
-        description: "Buy Nestle Nan Pro Stage 2 follow up Refill 400g"
+        description: "Buy Nestle Nan Pro Stage 2 follow up Refill 400g",
+        cartQuantity: 0
 
     },
     {
@@ -29,7 +30,8 @@ export const Products = [
         discount: 0.05,
         img:'Nestle Nan Pro stage 3 Follow up refill 400gm.jpg',
         brand: 'Nestle',
-        description: "Buy Nestle Nan Pro stage 3 Follow up refill 400gm"
+        description: "Buy Nestle Nan Pro stage 3 Follow up refill 400gm",
+        cartQuantity: 0
 
     },
     {
@@ -40,7 +42,8 @@ export const Products = [
         discount: 0.05,
         img:'Nestle nan pro stage 4 Follow up refill 400 gm.jpg',
         brand: 'Nestle',
-        description: "Buy Nestle nan pro stage 4 Follow up refill 400 gm"
+        description: "Buy Nestle nan pro stage 4 Follow up refill 400 gm",
+        cartQuantity: 0
 
     },
     {
@@ -51,7 +54,8 @@ export const Products = [
         discount: 0.2,
         img:'Himalaya baby shampoo 60ml.jpg',
         brand: 'Himalaya',
-        description: "Buy Himalaya baby shampoo 60ml"
+        description: "Buy Himalaya baby shampoo 60ml",
+        cartQuantity: 0
 
     },
     {
@@ -62,7 +66,8 @@ export const Products = [
         discount: 0.2,
         img:'Himalaya baby shampoo 100ml.jpg',
         brand: 'Himalaya',
-        description: "Buy Himalaya baby shampoo 100ml"
+        description: "Buy Himalaya baby shampoo 100ml",
+        cartQuantity: 0
 
     },
     {
@@ -73,7 +78,8 @@ export const Products = [
         discount: 0.2,
         img:'Himalaya baby shampoo 200ml.jpg',
         brand: 'Himalaya',
-        description: "Buy Himalaya baby shampoo 200ml"
+        description: "Buy Himalaya baby shampoo 200ml",
+        cartQuantity: 0
 
     },
     {
@@ -84,7 +90,8 @@ export const Products = [
         discount: 0.2,
         img:'Himalaya baby lotion 100ml.jpg',
         brand: 'Himalaya',
-        description: "Buy Himalaya baby lotion 100ml"
+        description: "Buy Himalaya baby lotion 100ml",
+        cartQuantity: 0
 
     },
     {
@@ -95,7 +102,8 @@ export const Products = [
         discount: 0.2,
         img:'Himalaya baby lotion 200ml.jpg',
         brand: 'Himalaya',
-        description: "Buy Himalaya baby lotion 200ml"
+        description: "Buy Himalaya baby lotion 200ml",
+        cartQuantity: 0
 
     },
     {
@@ -106,7 +114,8 @@ export const Products = [
         discount: 0.2,
         img:'Himalaya baby massage oil 100ml.jpg',
         brand: 'Himalaya',
-        description: "Buy Himalaya baby massage oil 100ml"
+        description: "Buy Himalaya baby massage oil 100ml",
+        cartQuantity: 0
 
     },
     {
@@ -117,7 +126,8 @@ export const Products = [
         discount: 0.2,
         img:'Himalaya baby massage oil 200ml.jpg',
         brand: 'Himalaya',
-        description: "Buy Himalaya baby massage oil 200ml"
+        description: "Buy Himalaya baby massage oil 200ml",
+        cartQuantity: 0
 
     },
     {
@@ -128,7 +138,8 @@ export const Products = [
         discount: 0.2,
         img:'Tiger Balm white ointment 21ml.jpg',
         brand: 'Tiger Balm',
-        description: "Buy Tiger Balm white ointment 21ml"
+        description: "Buy Tiger Balm white ointment 21ml",
+        cartQuantity: 0
 
     },
     {
@@ -139,7 +150,8 @@ export const Products = [
         discount: 0.2,
         img:'Tiger Balm red ointment 9ml.jpg',
         brand: 'Tiger Balm',
-        description: "Buy Tiger Balm red ointment 9ml"
+        description: "Buy Tiger Balm red ointment 9ml",
+        cartQuantity: 0
 
     },
     {
@@ -150,7 +162,8 @@ export const Products = [
         discount: 0.2,
         img:'Amrutanjan Strong 8ml.jpg',
         brand: 'Amrutanjan',
-        description: "Buy Amrutanjan Strong 8ml"
+        description: "Buy Amrutanjan Strong 8ml",
+        cartQuantity: 0
 
     },
     {
@@ -161,7 +174,8 @@ export const Products = [
         discount: 0.2,
         img:'Amrutanjan Strong 27.5ml.jpg',
         brand: 'Amrutanjan',
-        description: "Buy Himalaya baby massage oil 100ml"
+        description: "Buy Himalaya baby massage oil 100ml",
+        cartQuantity: 0
 
     },
     {
@@ -172,7 +186,8 @@ export const Products = [
         discount: 0.2,
         img:'Zandu balm (8ml+1.6mlfree).jpg',
         brand: 'Zandu',
-        description: "Buy Zandu balm (8ml+1.6mlfree)"
+        description: "Buy Zandu balm (8ml+1.6mlfree)",
+        cartQuantity: 0
 
     },
     {
@@ -183,7 +198,8 @@ export const Products = [
         discount: 0.2,
         img:'Volini spray 21.4ml.jpg',
         brand: 'Volini',
-        description: "Buy Volini spray 21.4ml"
+        description: "Buy Volini spray 21.4ml",
+        cartQuantity: 0
 
     },
     {
@@ -194,7 +210,8 @@ export const Products = [
         discount: 0.2,
         img:'Volini spray 43ml.jpg',
         brand: 'Volini',
-        description: "Buy Volini spray 43ml"
+        description: "Buy Volini spray 43ml",
+        cartQuantity: 0
 
     },
     {
@@ -205,7 +222,8 @@ export const Products = [
         discount: 0.2,
         img:'Volini spray 86ml.jpg',
         brand: 'Volini',
-        description: "Buy Volini spray 86ml"
+        description: "Buy Volini spray 86ml",
+        cartQuantity: 0
 
     },
     {
@@ -216,7 +234,8 @@ export const Products = [
         discount: 0.2,
         img:'Volini spray 148ml.jpg',
         brand: 'Volini',
-        description: "Buy Volini spray 148ml"
+        description: "Buy Volini spray 148ml",
+        cartQuantity: 0
     },
     {
         id:21,
@@ -226,7 +245,8 @@ export const Products = [
         discount: 0.2,
         img:'Bilginoglu Olive oil 100ml.jpg',
         brand: 'Bilginoglu',
-        description: "Buy Bilginoglu Olive oil 100ml"
+        description: "Buy Bilginoglu Olive oil 100ml",
+        cartQuantity: 0
     },
     {
         id:22,
@@ -236,7 +256,8 @@ export const Products = [
         discount: 0.2,
         img:'Franch Oil 100ml.jpg',
         brand: 'Franch Oil',
-        description: "Buy Franch Oil 100ml"
+        description: "Buy Franch Oil 100ml",
+        cartQuantity: 0
     },
     {
         id:23,
@@ -246,7 +267,8 @@ export const Products = [
         discount: 0.2,
         img:'Axe brand Oil 10ml.jpg',
         brand: 'Axe',
-        description: "Buy Axe brand Oil 10ml"
+        description: "Buy Axe brand Oil 10ml",
+        cartQuantity: 0
     },
     {
         id:24,
@@ -256,7 +278,8 @@ export const Products = [
         discount: 0.2,
         img:'Ponds light moisturizer 75ml.jpg',
         brand: 'Ponds',
-        description: "Buy Ponds light moisturizer 75ml"
+        description: "Buy Ponds light moisturizer 75ml",
+        cartQuantity: 0
     },
     {
         id:25,
@@ -266,7 +289,8 @@ export const Products = [
         discount: 0.2,
         img:'Himalaya neem face wash 50ml.jpg',
         brand: 'Himalaya',
-        description: "Buy Himalaya neem face wash 50ml"
+        description: "Buy Himalaya neem face wash 50ml",
+        cartQuantity: 0
     },
     {
         id:26,
@@ -276,7 +300,8 @@ export const Products = [
         discount: 0.2,
         img:'Himalaya neem face wash 100ml.jpg',
         brand: 'Himalaya',
-        description: "Buy Himalaya neem face wash 100ml"
+        description: "Buy Himalaya neem face wash 100ml",
+        cartQuantity: 0
     },
     {
         id:27,
@@ -286,7 +311,8 @@ export const Products = [
         discount: 0.2,
         img:'Patanjali Aloe vera gel.jpg',
         brand: 'Patanjali',
-        description: "Buy Patanjali Aloe vera gel 150ml"
+        description: "Buy Patanjali Aloe vera gel 150ml",
+        cartQuantity: 0
     },
     {
         id:28,
@@ -296,7 +322,8 @@ export const Products = [
         discount: 0.2,
         img:'Garnier Acne fight 6 in 1 pimple clear face wash 50gm.jpg',
         brand: 'Garnier',
-        description: "Buy Garnier Acne fight 6 in 1 pimple clear face wash 50gm"
+        description: "Buy Garnier Acne fight 6 in 1 pimple clear face wash 50gm",
+        cartQuantity: 0
     },
     {
         id:29,
@@ -306,7 +333,8 @@ export const Products = [
         discount: 0.2,
         img:'Head and shoulders shampoo cool menthol 180ml.jpg',
         brand: 'Head and shoulders',
-        description: "Buy Head and shoulders shampoo cool menthol 180ml"
+        description: "Buy Head and shoulders shampoo cool menthol 180ml",
+        cartQuantity: 0
     },
     {
         id:30,
@@ -316,7 +344,8 @@ export const Products = [
         discount: 0.2,
         img:'Livon Hair serum 50ml.jpg',
         brand: 'Livon',
-        description: "Buy Livon Hair serum 50ml"
+        description: "Buy Livon Hair serum 50ml",
+        cartQuantity: 0
     },
     {
         id:31,
@@ -326,7 +355,8 @@ export const Products = [
         discount: 0.2,
         img:'Indulekha bringha oil 100ml.jpg',
         brand: 'Indulekha',
-        description: "Buy Indulekha bringha oil 100ml"
+        description: "Buy Indulekha bringha oil 100ml",
+        cartQuantity: 0
     },
     {
         id:32,
@@ -336,6 +366,7 @@ export const Products = [
         discount: 0.2,
         img:'Garnier colour naturals black (70ml+ 60gm).jpg',
         brand: 'Garnier',
-        description: "Buy Garnier colour naturals black (70ml+ 60gm)"
+        description: "Buy Garnier colour naturals black (70ml+ 60gm)",
+        cartQuantity: 0
     }
 ];

@@ -1,11 +1,27 @@
 import React, { Component } from 'react'
 import styled from "styled-components"
 import {Link} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
+import { connect } from 'react-redux'
 import {Card} from 'react'
+import {addToCart} from './CartActions'
 import {ProductConsumer} from './ProductData'
 import { valueToNode } from '@babel/types'
 
-export class Product extends Component {
+function CartButton() {
+    let history = useHistory();
+    function handleClick() {
+        history.push("/Cart");
+      }
+    return (
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onClick={handleClick}>Go to Cart</button>
+    )
+}
+ class Product extends Component {
+    addItem = (id) => {
+        this.props.addToCart(id);
+    }
+
     render() {
         const {id,name,img,mrp,discount} = this.props.product;
         return (
@@ -31,11 +47,9 @@ export class Product extends Component {
                                 </p>
                                 </span>
                                 <center><p className="align-items-center nb-0 d-flex">
-                                <button type="button" className="btn btn-info align-self-center" data-toggle="modal" data-target="#exampleModal" onClick={
-                                        () => {}
-
+                                <button type="button" className="btn btn-cart align-self-center" data-toggle="modal" data-target="#exampleModal" onClick={
+                                        () => {this.addItem(id)}
                                     }
-                                    
                                     >Add to Cart</button>
                                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -52,9 +66,7 @@ export class Product extends Component {
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                                 
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal" onClick={()=>{
-                                                    window.location.href="/Cart"
-                                                }}>Go to Cart</button>
+                                                <CartButton/>
                                                 
                                             </div>
                                             </div>
@@ -70,11 +82,26 @@ export class Product extends Component {
         )
     }
 }
+const mapStateToProps = (state)=>{
+    return {
+      products: state.products
+    }
+  }
 
+const mapDispatchToProps= (dispatch)=>{
+    
+    return{
+        addToCart: (id)=>{dispatch(addToCart(id))}
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Product)
 
 const ProductWrapper = styled.div`
+color: var(--textColor) !important;
 .card-info{
     font-size:0.8rem;
+    color: var(--textColor) !important;
 }
 .card{
     border-color: transparent;
@@ -82,6 +109,8 @@ const ProductWrapper = styled.div`
 }
 .btn{
     font-size:0.7rem;
+    border: 0.1rem ;
+    color: var(--textColor) !important;
 }
 .card-price{
     font-size:0.8rem;
@@ -90,17 +119,20 @@ const ProductWrapper = styled.div`
     font-size:0.7rem;
     border-top: transparent;
     height: calc(200px);
+    color: var(--textColor) !important;
 }
 .card-title{
     line-height: 1.5em;
     height: 3em;      
     overflow: hidden;
+    color: var(--textColor) !important;
 }
 @media only screen and (max-width: 600px) {
     .card-title{
         line-height: 1.5em;
         height: 4.5em;      
         overflow: hidden;
+        color: var(--textColor) !important;
     }
   }
 .img-container{

@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const Navigator = styled.nav`
-background: var(--lightBlue);
+background: var(--mainPink);
 width: 100%;
-height: 12%;
-max-height: 22%;
+max-height: 30%;
+@media(min-width: 768px){
+  height: 8%;
+}
+color: var(--lightPink) !important;
 .nav-link{
-    color: var(--mainBlue) !important;
     font-size: 1.1rem;
     text-transform: capitalize;
 }
@@ -18,7 +20,11 @@ max-height: 22%;
 } 
 .navbar-collapse{
     max-height:100%;
-    background: var(--lightBlue);
+    background: var(--mainPink);
+}
+.navbar-brand{
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
   @media (min-width: 768px) {
     .navbar-brand{

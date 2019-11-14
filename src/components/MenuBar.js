@@ -17,9 +17,9 @@ export default class MenuBar extends Component {
     }
    render() {
       return (
-         <Navigator className="navbar navbar-expand-sm fixed-top navbar-dark px-sm-5 h-1 ">
-            <img className="navbar-brand" src="LazyMeds Logo Final.png" />
-            <button  className="navbar-toggler float-right navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+         <Navigator className="navbar navbar-expand-md fixed-top navbar-dark px-sm-5 h-1 ">
+            <img className="navbar-brand d-none d-md-block" src="LazyMeds Logo Final.png" />
+            <button  className="navbar-toggler float-left navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
             <span className="navbar-toggler-icon"></span>
             </button>
             <span className="navbar-collapse collapse dual-nav w-1 order-1 order-md-0" id="navbarCollapse">
@@ -34,7 +34,7 @@ export default class MenuBar extends Component {
             </span>
             <Link to="/Cart" className="ml-auto">
                   <ButtonContainer>
-                     <span className="mr-2 fas fa-shopping-cart fa-lg"/>
+                     <span className="float-right fas fa-shopping-cart fa-lg"/>
                   </ButtonContainer>
             </Link>
             <span className="d-none d-lg-block">

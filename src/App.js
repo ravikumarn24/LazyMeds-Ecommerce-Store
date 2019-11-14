@@ -17,11 +17,10 @@ class App extends React.Component {
   render() {
      return (
         <React.Fragment>
-           <MenuBar/>
            <Switch>
               <Route exact path="/" component={ProductGrid}/>
-              <Route exact path="/cart" component={Cart}/>
-              <Route exact path="/contact" component={Contact}/>
+              <Route exact path="/Cart" component={Cart}/>
+              <Route exact path="/Contact" component={Contact}/>
               <Route component={Error} />
            </Switch>
         </React.Fragment>
