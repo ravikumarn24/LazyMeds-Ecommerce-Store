@@ -17,6 +17,7 @@ class App extends React.Component {
   render() {
      return (
         <React.Fragment>
+           <MenuBar/>
            <Switch>
               <Route exact path="/" component={ProductGrid}/>
               <Route exact path="/Cart" component={Cart}/>

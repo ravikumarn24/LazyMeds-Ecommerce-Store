@@ -10,7 +10,6 @@ class ProductGrid extends Component {
     render() {
         return (
             <React.Fragment>
-                <MenuBar/>
                 <div className="upload-widget d-lg-none container alert alert-primary">
                     <center><span>Lazy to find the right products? Upload your prescription easily and we'll get delivered at your doorstep</span></center>
                     <center><UploadPrescription/></center>
