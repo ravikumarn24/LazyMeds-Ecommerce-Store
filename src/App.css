@@ -50,10 +50,12 @@ body{
   margin-top: 16%;
   color: var(--textColor) !important;
   align-content: center !important;
+
 }
 .cart-position{
   font-size: 0.9rem !important;
   margin-top:16%;
+  box-sizing: border-box !important;
 }
 }
 .nav-bar{
@@ -70,6 +72,7 @@ body{
   .cart-position{
     font-size: 0.9rem !important;
     margin-top: 6%;
+    box-sizing: border-box !important;
   }
 }
 .carousel-size{

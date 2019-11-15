@@ -11,6 +11,7 @@ class ProductGrid extends Component {
         return (
             <React.Fragment>
                 <MenuBar/>
+                <Carousel/>
                 <div className="upload-widget d-lg-none container alert alert-primary">
                     <center><span>Lazy to find the right products? Upload your prescription easily and we'll get delivered at your doorstep</span></center>
                     <center><UploadPrescription/></center>

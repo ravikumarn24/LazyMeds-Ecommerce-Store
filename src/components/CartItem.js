@@ -28,19 +28,19 @@ class CartItem extends Component {
         const discountedPrice = mrp-parseInt(discount*mrp);
         return (
                 <tr>
-                    <td class="">
+                    <td>
                         <div >
                             {name}
                         </div>
                     </td>
                     <td class=" text-align-center" >
-                        <Link to="/Cart"><button className="btn-xs btn-success py-1" onClick={() => {this.increaseQty(id)}}><i className="fas fa-plus"/></button></Link>
+                        <Link to="/Cart"><button className="btn-xs btn-outline-success py-1" onClick={() => {this.increaseQty(id)}}><i className="fas fa-plus"/></button></Link>
                         <strong className="px-2">{cartQuantity}</strong>
-                        <Link to="/Cart"><button className="btn-xs btn-danger" onClick={() => {this.reduceFromCart(id)}}><i className="fas fa-minus"/></button></Link>
+                        <Link to="/Cart"><button className="btn-xs btn-outline-danger" onClick={() => {this.reduceFromCart(id)}}><i className="fas fa-minus"/></button></Link>
                     </td>
-                    <td class=" text-center"><strong>Rs. {discountedPrice} </strong></td>
-                    <td class=" text-center"><strong>Rs. {cartQuantity * discountedPrice } </strong></td>
-                    <td class="">
+                    <td class="text-center"><strong>Rs. {discountedPrice} </strong></td>
+                    <td class="text-center"><strong>Rs. {cartQuantity * discountedPrice } </strong></td>
+                    <td >
                         <Link to="/Cart"><button type="button" class="close" onClick={() => {this.removeFromCart(id)}} aria-label="close">
                         <span aria-hidden="true">&times;</span>
                         </button></Link>
