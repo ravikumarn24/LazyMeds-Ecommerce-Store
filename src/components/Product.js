@@ -64,7 +64,7 @@ function CartButton() {
                                                 Hurray!!, {name} has been successfully added to your cart 
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-secondary btn-cart" data-dismiss="modal">Close</button>
                                                 
                                                 <CartButton/>
                                                 

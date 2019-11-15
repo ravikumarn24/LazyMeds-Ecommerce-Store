@@ -17,8 +17,8 @@ color: var(--lightPink) !important;
 }
 @media (max-width: 768px){
 .navbar-brand{
-    max-width: 100%;
-    max-height: 100%;
+    width: 10%;
+    height: 4%;
 }
 } 
 .navbar-collapse{
@@ -31,8 +31,8 @@ color: var(--lightPink) !important;
 }
   @media (min-width: 768px) {
     .navbar-brand{
-        width: auto;
-        height: 100%;
+        width: 100px;
+        height: 40px;
     }
   }
 `
