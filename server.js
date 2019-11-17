@@ -9,10 +9,10 @@ const router = express.Router();
 router.get('/getgAPI', (req, res) => res.json({ route: req.originalUrl }));
 router.get('/getCloudinaryAPI', (req, res) => res.json({ "name": "aswin" }));
 
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(bodyParser.json());
 app.use('/.netlify/functions/server', router);  // path must route to lambda
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
+app.use('/', (req, res) => res.sendFile(path.join(__dirname, 'build', 'index.html')));
 
 module.exports = app;
 module.exports.handler = serverless(app);
-app.listen(3000, () => console.log('Lazymeds Website'));
