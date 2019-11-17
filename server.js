@@ -15,3 +15,4 @@ app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 module.exports = app;
 module.exports.handler = serverless(app);
+app.listen(3000, () => console.log('Lazymeds Website'));
