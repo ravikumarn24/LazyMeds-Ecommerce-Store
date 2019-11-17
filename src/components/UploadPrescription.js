@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 export default class UploadPrescription extends Component {
     uploadWidget() {
+        
         window.cloudinary.openUploadWidget({ cloud_name: 'dlld49z2k', upload_preset: 'humw6nxm'},
             function(error, result) {
               if(!error && result && result.event === "success") { 
