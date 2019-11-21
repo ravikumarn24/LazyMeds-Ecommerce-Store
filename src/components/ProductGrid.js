@@ -15,6 +15,9 @@ class ProductGrid extends Component {
                 <div className="upload-widget d-lg-none container alert alert-primary">
                     <center><span>Lazy to find the right products? Upload your prescription easily and we'll get delivered at your doorstep</span></center>
                     <center><UploadPrescription/></center>
+                    <br/>
+                    <center><span>Call to Order : <a href="tel:+918248179620">+91 - 8248179620</a></span></center>
+                    <center><span><a href="http://wa.me/918248179620">Any queries, drop a whatsapp message </a> </span></center>
                 </div>
                 <div className="py-lg-5">
                     <div className="container">
