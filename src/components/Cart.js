@@ -99,33 +99,52 @@ export class Cart extends Component {
         for(itemIndex in this.props.state.cart){
             let item = this.props.state.cart[itemIndex];
             let discountedPrice = item.mrp-parseInt((item.discount)*(item.mrp));
-            cart_details += "%0a Item Number : " + (itemIndex+1);
-            cart_details += "%0a Item Name : " + item.name;
-            cart_details += "%0a Item Quantity : "+ item.cartQuantity;
-            cart_details += "%0a Per Item Price : " + discountedPrice;
+            cart_details += "\n Item Number : " + (itemIndex+1);
+            cart_details += "\n Item Name : " + item.name;
+            cart_details += "\n Item Quantity : "+ item.cartQuantity;
+            cart_details += "\n Per Item Price : " + discountedPrice;
             total += item.cartQuantity * discountedPrice;
-            cart_details += "%0a %0a";
+            cart_details += "\n \n";
         }
         if(itemIndex != -1){
-            cart_details += "%0a Total : "+ total;
+            cart_details += "\n Total : "+ total;
         }
         return cart_details;
     }
     sendToWhatsapp = () => {
         let whatsapp_msg = "ORDER DETAILS "
         if(!(this.name === null || this.name === "" )){
-            whatsapp_msg +=  "%0a Name : "+ this.name;
+            whatsapp_msg +=  "\n Name : "+ this.name;
         }
         if(!(this.mobile === null || this.mobile === 0)){
-            whatsapp_msg += "%0a Mobile Number : "+this.mobile;
+            whatsapp_msg += "\n Mobile Number : "+this.mobile;
         }
         if(!(this.address === null || this.address === "")){
-            whatsapp_msg += "%0a Delivery Address : "+this.address;
+            whatsapp_msg += "\n Delivery Address : "+this.address;
         }
-        whatsapp_msg += "%0a ORDER ITEMS %0a";
+        whatsapp_msg += "\n ORDER ITEMS %0a";
         whatsapp_msg += this.getCartDetails();
-        let link = "http://wa.me/918248179620?text=" + whatsapp_msg;
-        window.location.href=link;
+        let final_wp_msg = "";
+        fetch('http://api.textuploader.com/v1/posts', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'X-TextUploader-API-Key': 'btNohQAJlGlqlOwZx9xdPgjnS+2aptos',
+                },
+        body: JSON.stringify({
+            title: "New order from Mr. /Mrs. /Ms. "+this.name,
+            content: whatsapp_msg,
+            type: "public",
+            })
+        }).then((response) => response.json())
+        .then((responseJson) => {
+            final_wp_msg = responseJson.results[0].longurl;
+            let link = "http://wa.me/918248179620?text=" + "order_link: " + whatsapp_msg;
+            window.location.href=link;
+        })
+        
         this.props.state.orderComplete = false;
         this.props.setOriginalState();
         $("#modalForm").modal("hide");
