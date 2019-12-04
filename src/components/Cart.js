@@ -122,26 +122,22 @@ export class Cart extends Component {
         if(!(this.address === null || this.address === "")){
             whatsapp_msg += "\n Delivery Address : "+this.address;
         }
-        whatsapp_msg += "\n ORDER ITEMS %0a";
+        whatsapp_msg += "\n ORDER ITEMS ";
         whatsapp_msg += this.getCartDetails();
         let final_wp_msg = "";
-        fetch('http://api.textuploader.com/v1/posts', {
+        let formData = new URLSearchParams();
+        formData.append('content', whatsapp_msg);
+        formData.append('poster','lazymeds')
+        formData.append('expiry_days',60);
+        console.log(formData)
+        fetch('http://dpaste.com/api/v2/', {
         method: 'POST',
-        mode: 'no-cors',
-        headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'X-TextUploader-API-Key': 'btNohQAJlGlqlOwZx9xdPgjnS+2aptos',
-                },
-        body: JSON.stringify({
-            title: "New order from Mr. /Mrs. /Ms. "+this.name,
-            content: whatsapp_msg,
-            type: "public",
-            })
-        }).then((response) => response.json())
+        body: formData,
+        }).then((response) => response.text())
         .then((responseJson) => {
-            final_wp_msg = responseJson.results[0].longurl;
-            let link = "http://wa.me/918248179620?text=" + "order_link: " + whatsapp_msg;
+            console.log(responseJson);
+            final_wp_msg = responseJson;
+            let link = "http://wa.me/918248179620?text=" + "order_link: " + final_wp_msg;
             window.location.href=link;
         })
         
