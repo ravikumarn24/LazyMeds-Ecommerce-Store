@@ -32,6 +32,14 @@ class ProductGrid extends Component {
                     </div>
 
                 </div>
+                <div className="pb-4">
+                    <center>
+                        <span className="pr-3"><a href="https://www.facebook.com/lazymeds"><i class="fab fa-facebook-f facebook"></i></a></span>
+                        <span className="pr-3"><a href="https://www.instagram.com/lazymeds"><i class="fab fa-instagram instagram"></i></a></span>
+                        <span className="pr-3"><a href="https://www.linkedin.com/company/lazymeds"><i class="fab fa-linkedin linkedin"></i></a></span>
+                        <span ><a href="https://www.twitter.com/Lazy_meds"><i class="fab fa-twitter-square twitter"></i></a></span>
+                    </center>
+                </div>
             </React.Fragment>
         )
     }
