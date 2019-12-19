@@ -124,15 +124,21 @@ export class Cart extends Component {
         }
         whatsapp_msg += "\n ORDER ITEMS ";
         whatsapp_msg += this.getCartDetails();
+        whatsapp_msg += "\n\n\n *(Price of each item will be correspond to its price displayed on the website) "
         let final_wp_msg = "";
         let formData = new URLSearchParams();
+        let currentTime = (new Date()).getTime().toString();
+
         formData.append('content', whatsapp_msg);
-        formData.append('poster','lazymeds')
-        formData.append('expiry_days',60);
+
+        formData.append('filename','lazymeds_'+currentTime);
+        //formData.append('expires',60);
         console.log(formData)
-        fetch('http://dpaste.com/api/v2/', {
+        let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        fetch(proxyUrl + 'https://dpaste.org/api/', {
         method: 'POST',
         body: formData,
+        headers: new Headers({'origin': 'lazymeds.com'})
         }).then((response) => response.text())
         .then((responseJson) => {
             console.log(responseJson);
